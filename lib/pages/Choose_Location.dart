@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:world_time/services/world_time.dart';
+
+import '../services/world_time.dart';
+
 
 class ChooseLocation extends StatefulWidget {
 
@@ -42,33 +44,33 @@ class _ChooseLocationState extends State<ChooseLocation> {
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         backgroundColor: Colors.blue[900],
-        title: Text('Choose a Location'),
+        title: const Text('Choose a Location'),
         centerTitle: true,
         elevation: 0,
       ),
       body: ListView.builder(
-      itemCount: locations.length,
-      itemBuilder: (context,index){
-        return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 2.0,horizontal: 4.0),
-          child: Card(
-            child: ListTile(
-              onTap: (){
-                updateTime(index);
+        itemCount: locations.length,
+        itemBuilder: (context,index){
+          return Padding(
+            padding: const EdgeInsets.symmetric(vertical: 2.0,horizontal: 4.0),
+            child: Card(
+              child: ListTile(
+                onTap: (){
+                  updateTime(index);
 
-              },
-              title: Text(
-                locations[index].location ?? "Default location",
+                },
+                title: Text(
+                  locations[index].location ?? "Default location",
 
-              ),
-              leading: CircleAvatar(
-                backgroundImage: AssetImage('assets/${locations[index].flag}'),
+                ),
+                leading: CircleAvatar(
+                  backgroundImage: AssetImage('${locations[index].flag}'),
+                ),
               ),
             ),
-          ),
-        );
-      },
+          );
+        },
       ),
-      );
+    );
   }
 }

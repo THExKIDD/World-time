@@ -8,8 +8,8 @@ class WorldTime {
   String? location;
   String? time;
   String? flag;
- late String? urll;
- late bool isDaytime;
+  late String? urll;
+  late bool isDaytime;
 
 
   WorldTime({this.location,this.flag,this.urll});

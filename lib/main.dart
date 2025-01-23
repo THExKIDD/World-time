@@ -1,7 +1,8 @@
+import 'package:duniya_time/pages/Choose_Location.dart';
+import 'package:duniya_time/pages/Home.dart';
+import 'package:duniya_time/pages/Loading.dart';
 import 'package:flutter/material.dart';
-import 'package:world_time/pages/Home.dart';
-import 'package:world_time/pages/Loading.dart';
-import 'package:world_time/pages/Choose_Location.dart';
+
 void main() {
   runApp(MaterialApp(
     initialRoute: '/',
